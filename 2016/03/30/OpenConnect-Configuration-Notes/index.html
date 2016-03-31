@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="CentOS,Linux,Supervisord," />
+  <meta name="keywords" content="CentOS,OpenConnect," />
 
 
 
@@ -58,24 +58,36 @@
 
 
 <meta name="description" content="References
-Supervisor: A Process Control System Supervisord Home Page
-How to control your deamon with Supervisord (On CentOS) Installation Reference
-Setting Up Python and Supervisor on CentOS Configur">
+在 CentOS 7 上搭建 Cisco AnyConnect VPN Supervisord Home Page
+OpenConnect VPN on Mac OS X Installation Reference
+
+Prerequisite
+OS - Centos 7
+
+DRAFT">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Centos Supervisord Notes">
-<meta property="og:url" content="http://silverbelial.github.io/2016/03/29/Centos-Supervisord/index.html">
+<meta property="og:title" content="OpenConnect Configuration Notes">
+<meta property="og:url" content="http://silverbelial.github.io/2016/03/30/OpenConnect-Configuration-Notes/index.html">
 <meta property="og:site_name" content="Silver Belial IO">
 <meta property="og:description" content="References
-Supervisor: A Process Control System Supervisord Home Page
-How to control your deamon with Supervisord (On CentOS) Installation Reference
-Setting Up Python and Supervisor on CentOS Configur">
-<meta property="og:updated_time" content="2016-03-30T06:30:39.000Z">
+在 CentOS 7 上搭建 Cisco AnyConnect VPN Supervisord Home Page
+OpenConnect VPN on Mac OS X Installation Reference
+
+Prerequisite
+OS - Centos 7
+
+DRAFT">
+<meta property="og:updated_time" content="2016-03-31T06:28:05.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Centos Supervisord Notes">
+<meta name="twitter:title" content="OpenConnect Configuration Notes">
 <meta name="twitter:description" content="References
-Supervisor: A Process Control System Supervisord Home Page
-How to control your deamon with Supervisord (On CentOS) Installation Reference
-Setting Up Python and Supervisor on CentOS Configur">
+在 CentOS 7 上搭建 Cisco AnyConnect VPN Supervisord Home Page
+OpenConnect VPN on Mac OS X Installation Reference
+
+Prerequisite
+OS - Centos 7
+
+DRAFT">
 
 
 
@@ -93,7 +105,7 @@ Setting Up Python and Supervisor on CentOS Configur">
   };
 </script>
 
-  <title> Centos Supervisord Notes | Silver Belial IO </title>
+  <title> OpenConnect Configuration Notes | Silver Belial IO </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -223,7 +235,7 @@ Setting Up Python and Supervisor on CentOS Configur">
             
             
               
-                Centos Supervisord Notes
+                OpenConnect Configuration Notes
               
             
           </h1>
@@ -235,30 +247,11 @@ Setting Up Python and Supervisor on CentOS Configur">
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-03-29T11:16:30+08:00" content="2016-03-29">
-              2016-03-29
+            <time itemprop="dateCreated" datetime="2016-03-30T11:40:10+08:00" content="2016-03-30">
+              2016-03-30
             </time>
           </span>
 
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Learning-Notes/" itemprop="url" rel="index">
-                    <span itemprop="name">Learning Notes</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
           
 
           
@@ -282,24 +275,13 @@ Setting Up Python and Supervisor on CentOS Configur">
 
       
         <h1 id="References"><a href="#References" class="headerlink" title="References"></a><em>References</em></h1><ul>
-<li><strong><a href="http://supervisord.org/index.html" target="_blank" rel="external">Supervisor: A Process Control System</a></strong> Supervisord Home Page</li>
-<li><strong><a href="https://medium.com/@thangman22/how-to-control-your-deamon-with-supervisord-on-centos-4ec4658205bf#.fwf72rhr8" target="_blank" rel="external">How to control your deamon with Supervisord (On CentOS)</a></strong> Installation Reference</li>
-<li><strong><a href="https://rayed.com/wordpress/?p=1496" target="_blank" rel="external">Setting Up Python and Supervisor on CentOS</a></strong> Configuration Reference</li>
+<li><strong><a href="http://ifreedomlife.com/2015/04/20/Setup-Cisco-AnyConnect-VPN-on-CentOS7/" target="_blank" rel="external">在 CentOS 7 上搭建 Cisco AnyConnect VPN</a></strong> Supervisord Home Page</li>
+<li><strong><a href="https://gist.github.com/moklett/3170636" target="_blank" rel="external">OpenConnect VPN on Mac OS X</a></strong> Installation Reference</li>
 </ul>
-<p>When deploying user coded application, it is needed that to run the application as a service. This is a quick reference to install and configure supervisord to monitor an application like a service.</p>
-<a id="more"></a>
 <h1 id="Prerequisite"><a href="#Prerequisite" class="headerlink" title="Prerequisite"></a><em>Prerequisite</em></h1><ul>
 <li>OS - Centos 7</li>
-<li>Python</li>
 </ul>
-<p>This ref uses pip to install supervisord. If not installed, DO GOOGLE;</p>
-<h1 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a><em>Installation</em></h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install python-setuptools</span><br><span class="line">sudo easy_install pip</span><br><span class="line">sudo pip install supervisor</span><br></pre></td></tr></table></figure>
-<h1 id="Configuration"><a href="#Configuration" class="headerlink" title="Configuration"></a><em>Configuration</em></h1><p>Use built-in configuration generation tool and setup custom conf folder<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span>_supervisord_conf &gt; supervisord.conf</span><br><span class="line">sudo cp supervisord.conf /etc/supervisord.conf</span><br><span class="line">sudo mkdir /etc/supervisord.d/</span><br><span class="line">sudo vi /etc/supervisord.conf</span><br><span class="line">:</span><br><span class="line">[include]</span><br><span class="line">files = /etc/supervisord.d/*.conf</span><br><span class="line">:</span><br></pre></td></tr></table></figure></p>
-<p>Make supervisord as a service (create /etc/rc.d/init.d/supervisord):<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line">sudo vi /etc/rc.d/init.d/supervisord</span><br><span class="line"><span class="shebang">#!/bin/sh</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># /etc/rc.d/init.d/supervisord</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Supervisor is a client/server system that</span></span><br><span class="line"><span class="comment"># allows its users to monitor and control a</span></span><br><span class="line"><span class="comment"># number of processes on UNIX-like operating</span></span><br><span class="line"><span class="comment"># systems.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># chkconfig: - 64 36</span></span><br><span class="line"><span class="comment"># description: Supervisor Server</span></span><br><span class="line"><span class="comment"># processname: supervisord</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Source init functions</span></span><br><span class="line">. /etc/rc.d/init.d/<span class="built_in">functions</span></span><br><span class="line"></span><br><span class="line">prog=<span class="string">"supervisord"</span></span><br><span class="line"></span><br><span class="line">prefix=<span class="string">"/usr/"</span></span><br><span class="line"><span class="built_in">exec</span>_prefix=<span class="string">"<span class="variable">$&#123;prefix&#125;</span>"</span></span><br><span class="line">prog_bin=<span class="string">"<span class="variable">$&#123;exec_prefix&#125;</span>/bin/supervisord"</span></span><br><span class="line">PIDFILE=<span class="string">"/var/run/<span class="variable">$prog</span>.pid"</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">start</span></span>()</span><br><span class="line">&#123;</span><br><span class="line">       <span class="built_in">echo</span> -n $<span class="string">"Starting <span class="variable">$prog</span>: "</span></span><br><span class="line">       daemon <span class="variable">$prog_bin</span> --pidfile <span class="variable">$PIDFILE</span></span><br><span class="line">       [ <span class="operator">-f</span> <span class="variable">$PIDFILE</span> ] &amp;&amp; success $<span class="string">"<span class="variable">$prog</span> startup"</span> || failure $<span class="string">"<span class="variable">$prog</span> startup"</span></span><br><span class="line">       <span class="built_in">echo</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">stop</span></span>()</span><br><span class="line">&#123;</span><br><span class="line">       <span class="built_in">echo</span> -n $<span class="string">"Shutting down <span class="variable">$prog</span>: "</span></span><br><span class="line">       [ <span class="operator">-f</span> <span class="variable">$PIDFILE</span> ] &amp;&amp; killproc <span class="variable">$prog</span> || success $<span class="string">"<span class="variable">$prog</span> shutdown"</span></span><br><span class="line">       <span class="built_in">echo</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">case</span> <span class="string">"<span class="variable">$1</span>"</span> <span class="keyword">in</span></span><br><span class="line"></span><br><span class="line"> start)</span><br><span class="line">   start</span><br><span class="line"> ;;</span><br><span class="line"></span><br><span class="line"> stop)</span><br><span class="line">   stop</span><br><span class="line"> ;;</span><br><span class="line"></span><br><span class="line"> status)</span><br><span class="line">       status <span class="variable">$prog</span></span><br><span class="line"> ;;</span><br><span class="line"></span><br><span class="line"> restart)</span><br><span class="line">   stop</span><br><span class="line">   start</span><br><span class="line"> ;;</span><br><span class="line"></span><br><span class="line"> *)</span><br><span class="line">   <span class="built_in">echo</span> <span class="string">"Usage: <span class="variable">$0</span> &#123;start|stop|restart|status&#125;"</span></span><br><span class="line"> ;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">esac</span></span><br></pre></td></tr></table></figure></p>
-<p>And Start Service:<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo chmod +x /etc/rc.d/init.d/supervisord</span><br><span class="line">sudo chkconfig --add supervisord</span><br><span class="line">sudo chkconfig supervisord on</span><br><span class="line">sudo service supervisord start</span><br></pre></td></tr></table></figure></p>
-<h1 id="Sample-App"><a href="#Sample-App" class="headerlink" title="Sample App"></a><em>Sample App</em></h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/supervisord.d/flask_webhook.conf</span><br><span class="line">:</span><br><span class="line">[program:flask_webhook]</span><br><span class="line"><span class="built_in">command</span>=/usr/bin/python flask_webhook.py</span><br><span class="line">process_name=%(program_name)s</span><br><span class="line">numprocs=<span class="number">1</span></span><br><span class="line">directory=/usr/<span class="built_in">local</span>/src/scripts</span><br><span class="line">priority=<span class="number">999</span></span><br><span class="line">autostart=<span class="literal">true</span></span><br><span class="line">autorestart=<span class="literal">true</span></span><br><span class="line">startretries=<span class="number">3</span></span><br><span class="line">stopwaitsecs=<span class="number">5</span></span><br><span class="line">stdout_logfile=/usr/<span class="built_in">local</span>/src/scripts/flask_webhook.log</span><br><span class="line">stdout_logfile_maxbytes=<span class="number">1</span>MB</span><br><span class="line">:</span><br></pre></td></tr></table></figure>
-<p>Activating the Program<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">supervisorctl reread</span><br><span class="line">supervisorctl add flask_webhook</span><br><span class="line">supervisorctl start flask_webhook</span><br></pre></td></tr></table></figure></p>
-
+<h1 id="DRAFT"><a href="#DRAFT" class="headerlink" title="DRAFT"></a><em>DRAFT</em></h1>
       
     </div>
 
@@ -315,9 +297,7 @@ Setting Up Python and Supervisor on CentOS Configur">
           
             <a href="/tags/CentOS/" rel="tag">#CentOS</a>
           
-            <a href="/tags/Linux/" rel="tag">#Linux</a>
-          
-            <a href="/tags/Supervisord/" rel="tag">#Supervisord</a>
+            <a href="/tags/OpenConnect/" rel="tag">#OpenConnect</a>
           
         </div>
       
@@ -326,13 +306,13 @@ Setting Up Python and Supervisor on CentOS Configur">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/03/30/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/03/30/hello-world/" rel="prev" title="Hello World">
-                Hello World <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -451,7 +431,7 @@ Setting Up Python and Supervisor on CentOS Configur">
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#References"><span class="nav-number">1.</span> <span class="nav-text">References</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Prerequisite"><span class="nav-number">2.</span> <span class="nav-text">Prerequisite</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Installation"><span class="nav-number">3.</span> <span class="nav-text">Installation</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Configuration"><span class="nav-number">4.</span> <span class="nav-text">Configuration</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Sample-App"><span class="nav-number">5.</span> <span class="nav-text">Sample App</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#References"><span class="nav-number">1.</span> <span class="nav-text">References</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Prerequisite"><span class="nav-number">2.</span> <span class="nav-text">Prerequisite</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#DRAFT"><span class="nav-number">3.</span> <span class="nav-text">DRAFT</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
